@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+
+    <head>
+
+        <meta charset="UTF-8">
+
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <meta name="description" content="Registrarse">
+
+        <title>Registro | RANDOMTECHNO</title>
+        <link rel="shortcut icon" href="..\images\Favicon.jpg">
+
+        <link rel="stylesheet" href="../css/compilado.css">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald&family=Spartan:wght@300&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    </head>
+
+    <body>
+
+        <header>
+            <a href="..\index.html"><div class="logotipo"><h3 class="logo">RANDOMTECHNO</h3></div></a>
+            <nav>
+                <ul class="menu" id="menu">
+                    <div class="buscador">
+                        <form role="search" class="searchForm">
+                            <input type="submit" value="" class="searchSubmit"> 
+                            <input type="search" class="searchText" placeholder="Buscar" autocomplete="off">
+                          </form>
+                    </div>
+                    <li><a href="#">Productos</a>
+                        <ul class="submenu">
+                            <li><a href="">Repuestos, gadgets, & accesorios</a></li>
+                            <li><a href="">Drones & cámaras</a></li>
+                            <li><a href="">Celus & tablets</a></li>
+                            <li><a href="">Placas & PCs</a></li>
+                            <li><a href="">Todo sonido</a></li>
+                            <li><a href="">Electrodomésticos</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="faq.html">Ayuda</a></li>
+                    <li><a href="login.html">Login</a></li>
+                </ul>
+                <!-- MENÚ HAMBURGUESA -->
+                <div class="menuBar"><i class="fas fa-bars" id="menuBar"></i></div>
+                <!-- CARRITO -->
+                <div class="carrito"><span class="p1 fa-stack fa-2x has-badge" data-count="4"><i class="p3 fa fa-shopping-cart fa-stack-1x xfa-inverse" data-count="4b"></i></span></div>
+            </nav>
+        </header>
+
+        <section class="contenedorRegistro">
+            <div class="cajaRegistro">
+                <form>
+                    <h1 style="font-weight: 700;">Crear cuenta</h1>
+                    <input type="textbox" placeholder="Nombre & apellido" required>
+                    <input type="email" placeholder="Correo electrónico" required>
+                    <input type="textbox" placeholder="Usuario" required>
+                    <input type="password" placeholder="Contraseña" required>
+                    <button type="submit" class="registroBtn" style="cursor:pointer">Registrarse</button>
+                </form>
+            </div>
+        </section>
+
+        <footer>
+            <div class="fb"><i class="fab fa-facebook-f"></i></div>
+            <a href="..\index.html" style="text-decoration: none;"><h3>RANDOMTECHNO</h3></a>
+            <div class="ig"><i class="fab fa-instagram"></i></div>
+        </footer>
+
+        <!-- ANIMACIONES -->
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script src="js/scripts.js"></script>
+        <script>
+            AOS.init();
+            let menu = document.getElementById('menu');
+            let menu_bar = document.getElementById('menuBar');
+            menu_bar.addEventListener('click', function() {
+            menu.classList.toggle('menu-toggle');
+            })
+        </script>
+
+    </body>
+
+</html>

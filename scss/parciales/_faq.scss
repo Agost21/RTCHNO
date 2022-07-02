@@ -1,0 +1,115 @@
+.faqSection {
+    background-size: contain;
+    background-repeat: repeat;
+    background: linear-gradient(0, #4b001f, #120041, #000000);
+    .contenedorFaq {
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        text-align: center;
+        margin: 0 auto;
+        background-color: rgba(0, 0, 0, 0.493);
+        border: 1px transparent solid;
+        border-image:-webkit-linear-gradient(left,rgb(0, 47, 255),rgb(255, 0, 85)) 1 10;
+        color: white;
+        font-family: 'Oswald', sans-serif;
+        font-weight: lighter;
+        font-size: 1.3rem;
+        width: 60%;
+        padding: 2rem;
+        h1 {
+            display: block;
+            text-align: center;
+            margin: 0 auto;
+            font-size: 2.5rem;
+        }
+        .containerAcc {
+            width: 90%;
+            margin: 10px auto;
+            .accordion {
+                h2 {
+                    padding-top: 0.1rem;
+                    padding-left: 0.1rem;
+                    padding-bottom: 0.1rem;
+                    padding-right: 0.1rem;
+                    margin-bottom: 0.7rem;
+                }
+            }
+            button.accordion {
+                width: 100%;
+                background-color: rgba(0, 0, 0, 0);
+                border: none;
+                outline: none;
+                margin-left: auto;
+                margin-right: auto;
+                text-align: center;
+                padding: 10px 10px;
+                font-size: 1rem;
+                color: rgb(255, 255, 255);
+                cursor: pointer;
+                transition: background-color 0.2s linear;
+                font-family: 'Oswald';
+            }
+            button.accordion:after {
+                font-family: 'Oswald';
+                content: "\f150";
+                font-family: "fontawesome";
+                font-size: 1rem;
+                float: right;
+            }
+            button.accordion.is-open:after {
+                content: "\f151";
+            }
+            button.accordion:hover,
+            button.accordion.is-open {
+                background-color: rgb(255, 255, 255);
+                color: rgb(0, 0, 0);
+                font-family: 'Oswald';
+            }
+            .accordionContent {
+                background-color: rgb(0, 0, 0);
+                border-left: 1px solid rgb(145, 255, 0);
+                border-right: 1px solid rgb(153, 255, 36);
+                padding: 0 10px;
+                max-height: 0;
+                overflow: hidden;
+                transition: max-height 0.2s ease-in-out;
+            }
+        }
+    }
+}
+
+
+
+/* RESPONSIVE */
+@media only screen and (max-width: 1024px) {
+    .faqSection {
+        .contenedorFaq {
+            h1 {
+                font-size: 2.5rem;
+            }
+            .accordion {
+                h2 {
+                    padding-top: 0.1rem;
+                    padding-left: 0.1rem;
+                    padding-bottom: 0.1rem;
+                    padding-right: 0.1rem;
+                    font-size: 1.5rem;
+                }
+            }
+            button.accordion {
+                padding: 5px 5px;
+            }
+            .accordionContent {
+                p {
+                    padding: 1rem 1rem;
+                }
+            }
+        }
+    }
+}
+@media only screen and (min-width: 1025px) and (max-width: 1200px) {
+    h2 {
+        font-size: 1.5rem;
+    }
+}

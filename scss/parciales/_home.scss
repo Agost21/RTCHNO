@@ -1,0 +1,2417 @@
+@mixin centerContent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100vw;
+    height: fit-content;
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+    background-image: url("../images/FondoPortadaLandingPage.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    max-width: 100%;
+    .contenidoPortada {
+        margin-bottom: 15rem;
+        color: #fff;
+        h1 {
+            font-family: 'Bebas Neue', sans-serif;
+            font-weight: lighter;
+            font-size: 5rem;
+            margin-bottom: 0.5rem;
+            color: white;
+        }
+        h3 {
+            margin-bottom: 0.5rem;
+            margin-top: 0.5rem;
+            font-family: 'Spartan', sans-serif;
+            font-weight: lighter;
+            font-size: 1.3rem;
+        }
+        button {
+            cursor: pointer;
+            color: #fff;
+        }
+        button:hover {
+            box-shadow: none;
+        }
+        .btnOfertas, .btnVerTodo {
+            background-color: #f700ff;
+            padding: 8px 35px;
+            font-size: 1em;
+            font-family: 'Spartan', sans-serif;
+            font-weight: bold;
+            border-radius: 20px;
+            border: none;
+        }
+        .btnVerTodo  {
+            width: 170px;
+            height: 50px;
+            border: none;
+            outline: none;
+            color: #fff;
+            background: rgb(0, 0, 0);
+            cursor: pointer;
+            position: relative;
+            z-index: 0;
+            border-radius: 10px;
+            border: 1px solid #fff;
+            margin: 20px;
+        }
+        .btnVerTodo:before {
+            content: '';
+            background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+            position: absolute;
+            top: -2px;
+            left:-2px;
+            background-size: 400%;
+            z-index: -1;
+            filter: blur(5px);
+            width: calc(100% + 4px);
+            height: calc(100% + 4px);
+            animation: glowing 20s linear infinite;
+            opacity: 0;
+            transition: opacity .3s ease-in-out;
+            border-radius: 10px;
+        }
+        .btnVerTodo:active {
+            color: #000
+        }
+        .btnVerTodo:active:after {
+            background: transparent;
+        }
+        .btnVerTodo:hover:before {
+            opacity: 1;
+        }
+        .btnVerTodo:after {
+            z-index: -1;
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: rgba(17, 17, 17, 0);
+            left: 0;
+            top: 0;
+            border-radius: 10px;
+        }
+        @keyframes glowing {
+            0% { background-position: 0 0; }
+            50% { background-position: 400% 0; }
+            100% { background-position: 0 0; }
+        }
+        .btnOfertas {
+            width: 170px;
+            height: 50px;
+            border: none;
+            outline: none;
+            color: #fff;
+            background: rgb(17, 17, 17);
+            cursor: pointer;
+            position: relative;
+            z-index: 0;
+            border-radius: 10px;
+            text-decoration: none;
+        }
+        .btnOfertas:before {
+            content: '';
+            background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+            position: absolute;
+            top: -2px;
+            left:-2px;
+            background-size: 400%;
+            z-index: -1;
+            filter: blur(5px);
+            width: calc(100% + 4px);
+            height: calc(100% + 4px);
+            animation: glowing 20s linear infinite;
+            opacity: 0;
+            transition: opacity .3s ease-in-out;
+            border-radius: 10px;
+        }
+        .btnOfertas:active {
+            color: #000
+        }
+        .btnOfertas:active:after {
+            background: transparent;
+        }
+        .btnOfertas:hover:before {
+            opacity: 1;
+        }
+        .btnOfertas:after {
+            z-index: -1;
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: rgb(247, 0, 255);
+            left: 0;
+            top: 0;
+            border-radius: 10px;
+        }
+        @keyframes glowing {
+            0% { background-position: 0 0; }
+            50% { background-position: 400% 0; }
+            100% { background-position: 0 0; }
+        }
+    }
+    .imgPortada {
+        margin-bottom: 10rem;
+    }
+}
+
+.divisor {
+    background: url("../images/Separador.jpg");
+    width: 100%;
+    height: 20vh;
+    background-attachment: fixed;
+}
+
+.zonaCategorías {
+    background: rgb(0,255,166);
+    background: -moz-linear-gradient(82deg, rgba(0,255,166,1) 13%, rgba(143,74,255,1) 60%, rgba(232,69,252,1) 100%);
+    background: -webkit-linear-gradient(82deg, rgba(0,255,166,1) 13%, rgba(143,74,255,1) 60%, rgba(232,69,252,1) 100%);
+    background: linear-gradient(82deg, rgba(0,255,166,1) 13%, rgba(143,74,255,1) 60%, rgba(232,69,252,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#00ffa6",endColorstr="#e845fc",GradientType=1);
+    display: inline-flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100vw;
+    height: fit-content;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    .imgCatLP {
+        border: 1px solid black;
+        border-radius: 100%;
+        overflow: hidden;
+        width: fit-content;
+        height: fit-content;
+        background-color: #000;
+        -webkit-transition: 0.4s ease;
+        transition: 0.4s ease;
+    }
+    .imgCatLP:hover {
+        -webkit-transform: scale(1.08);
+        transform: scale(1.08);
+        cursor: pointer;
+    }
+}
+
+$animationSpeed: 40s;
+@keyframes scroll {
+	0% { transform: translateX(0); }
+	100% { transform: translateX(calc(-250px * 7))}
+}
+.slider {
+	height: fit-content;
+	margin: auto;
+	overflow: hidden;
+	position: relative;
+	width: 100vw;
+    background-color: white;
+	.slideTrack {
+		animation: scroll $animationSpeed linear infinite;
+		width: calc(250px * 14);
+        @include centerContent;
+	}
+	.slide {
+		height: fit-content;
+		width: 250px;
+        cursor: pointer;
+	}
+}
+
+.secciónVistoRecientemente {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: fit-content;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    background: rgb(0,255,248);
+    background: -moz-linear-gradient(75deg, rgba(0,255,248,1) 0%, rgba(188,0,255,1) 84%);
+    background: -webkit-linear-gradient(75deg, rgba(0,255,248,1) 0%, rgba(188,0,255,1) 84%);
+    background: linear-gradient(75deg, rgba(0,255,248,1) 0%, rgba(188,0,255,1) 84%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#00fff8",endColorstr="#bc00ff",GradientType=1);
+    .contenedorDeTarjetas {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100vw;
+        height: 70vh;
+        h2 {
+            font-family: 'Bebas Neue', sans-serif;
+            font-style: italic;
+            font-size: 4rem;
+            font-weight: lighter;
+            color: white;
+            padding: 0rem 0rem;
+            margin: 1rem 1rem;
+        }
+        .miniCard {
+            background: rgb(0, 0, 0);
+            width: 25rem;
+            display: flex;
+            align-items: center;
+            padding: 1.5rem 1.5rem;
+            margin-bottom: 1rem;
+            justify-content:space-evenly;
+            border-radius: 10px;
+            box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.301);
+            overflow: hidden;
+            -webkit-transition: 0.4s ease;
+            transition: 0.4s ease;
+            .content {
+                display: flex;
+                align-items: center;
+                color: #ffffff;
+                font-family: 'Spartan';
+                .img {
+                    height: 5rem;
+                    width: 5rem;
+                    margin-right: 1rem;
+                    box-shadow: 0px 0px 5px rgba(0,0,0,0.2);
+                }
+                img {
+                    height: 100%;
+                    width: 100%;
+                    object-fit: cover;
+                    -webkit-transition: 0.4s ease;
+                    transition: 0.4s ease;
+                }
+                img:hover {
+                    -webkit-transform: scale(1.08);
+                    transform: scale(1.08);
+                    cursor: pointer;
+                }
+                .details {
+                    span {
+                        font-weight: 600;
+                        font-size: 0.7rem;
+                        color: #ffffff;
+                        font-family: 'Spartan';
+                        margin-right: 2rem;
+                    }
+                }
+            }
+            a {
+                text-decoration: none;
+                padding: 7px 18px;
+                border-radius: 5px;
+                color: #fff;
+                border: 1px solid rgb(157, 255, 0);
+                transition: all 0.3s ease;
+                font-family: 'Spartan';
+                font-size: 0.8rem;
+                margin-right: 1.5rem;
+            }
+            a:hover {
+                transform: scale(0.94);
+            }
+        }
+        .miniCard:hover {
+            -webkit-transform: scale(1.08);
+            transform: scale(1.08);
+        }
+        .pVistoRec {
+            font-size: 1.5rem;
+            font-family: 'Oswald';
+            color: white;
+        }
+        .pVistoRec:hover {
+            text-shadow: 0 0 10px white;
+        }
+    }
+}
+
+.sugerenciasSegúnVisitas {
+    width: 100vw;
+    height: fit-content;
+    background: rgb(0,255,248);
+    background: -moz-linear-gradient(259deg, rgba(0,255,248,1) 0%, rgba(188,0,255,1) 84%);
+    background: -webkit-linear-gradient(259deg, rgba(0,255,248,1) 0%, rgba(188,0,255,1) 84%);
+    background: linear-gradient(259deg, rgba(0,255,248,1) 0%, rgba(188,0,255,1) 84%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#00fff8",endColorstr="#bc00ff",GradientType=1);
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    .contenedorSugerencias {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100vw;
+        height: 100%;
+        h2 {
+            font-family: 'Bebas Neue', sans-serif;
+            font-style: italic;
+            font-size: 4rem;
+            font-weight: lighter;
+            color: white;
+            padding: 0rem 0rem;
+            margin: 1rem 1rem;
+        }
+        .grillaProductosSugeridos {
+            display: inline-flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: fit-content;
+            column-gap: 2rem;
+            .productCardLP {
+                max-width: fit-content;
+                max-height: fit-content;
+                border-radius: 10px;
+                padding: 20px 20px 20px 20px;
+                background: rgb(255, 255, 255);
+                box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+                z-index: 3;
+                overflow: hidden;
+                font-family: 'Oswald', sans-serif;
+                -webkit-animation-name: zoomIn;
+                animation-name: zoomIn;
+                -webkit-animation-duration: 1s;
+                animation-duration: 1s;
+                -webkit-animation-fill-mode: both;
+                animation-fill-mode: both;
+                }
+                @-webkit-keyframes zoomIn {
+                0% {
+                opacity: 0;
+                -webkit-transform: scale3d(.3, .3, .3);
+                transform: scale3d(.3, .3, .3);
+                }
+                50% {
+                opacity: 1;
+                }
+                }
+                @keyframes zoomIn {
+                0% {
+                opacity: 0;
+                -webkit-transform: scale3d(.3, .3, .3);
+                transform: scale3d(.3, .3, .3);
+                }
+                50% {
+                opacity: 1;
+                }
+            }
+        }
+        .verMás {
+            font-size: 1.5rem;
+            font-family: 'Oswald', sans-serif;
+            color: white;
+            cursor: pointer;
+        }
+        .verMás:hover {
+            text-shadow: 0 0 10px white;
+        }
+    }
+}
+.productCardLP .logoMini {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.productCardLP .logoMini img {
+    height: 40px;
+    width: 40px;
+    object-fit: cover;
+}
+.productCardLP .logoMini i {
+    font-size: 1rem;
+    color: #000000;
+}
+.productCardLP .imagenProducto {
+    position: relative;
+    height: 150px;
+}
+.productCardLP .imagenProducto img {
+    height: 120px;
+    width: 210px;
+    object-fit: cover;
+    z-index: -1;
+    opacity: 0;
+}
+.productCardLP .imagenProducto img.active {
+    opacity: 1;
+}
+.prodDetalles .prodNombre {
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: #161616;
+}
+.prodNombre {
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: #161616;
+}
+.productCardLP .prodDetalles p {
+    font-size: 1rem;
+    font-weight: 400;
+    color: #333;
+    text-align: justify;
+}
+.productCardLP .color-priceLP .color-option {
+    display: flex;
+    align-items: center;
+}
+.color-priceLP {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 5px;
+}
+.color-priceLP .color-option .color {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #333;
+    margin-right: 8px;
+}
+.color-option  .circles {
+    display: flex;
+}
+.color-option  .circles .circle {
+    height: 18px;
+    width: 18px;
+    background: #000000;
+    border-radius: 50%;
+    margin: 0 4px;
+    cursor: pointer;
+    transition: all 0.4s ease;
+}
+.color-option  .circles .circle.blue.active{
+    box-shadow: 0 0 0 2px #fff,
+                0 0 0 4px #000000;
+}
+.color-option  .circles .circle.pink{
+    background: #ff0022;
+}
+.color-option  .circles .circle.pink.active{
+    box-shadow: 0 0 0 2px #fff,
+                0 0 0 4px #ff0040;
+}
+.color-option  .circles .circle.yellow{
+    background: #363636;
+}
+.color-option  .circles .circle.yellow.active{
+    box-shadow: 0 0 0 2px #fff,
+                0 0 0 4px #252525;
+}
+.color-priceLP .priceLP {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.color-priceLP .priceLP .price_num {
+    font-size: 1.7rem;
+    font-weight: 600;
+    color: #707070;
+}
+.color-priceLP .priceLP .price_letter {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-top: -4px;
+    color: #707070;
+}
+.productCardLP .buttonLP {
+    position: relative;
+    height: 35px;
+    width: 100%;
+    border-radius: 7px;
+    margin-top: 10px;
+    overflow: hidden;
+}
+.productCardLP .buttonLP .button-layer {
+    position: absolute;
+    height: 100%;
+    width: 300%;
+    left: -100%;
+    background-image: linear-gradient(135deg,#9708CC, #43CBFF,#9708CC, #43CBFF );
+    transition: all 0.4s ease;
+}
+.productCardLP .buttonLP:hover .button-layer {
+    left: 0;
+}
+.productCardLP .buttonLP button {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    background: none;
+    outline: none;
+    border: none;
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: #fff;
+    font-family: 'Spartan';
+}
+.productCardLP img {
+    -webkit-transition: 0.4s ease;
+    transition: 0.4s ease;
+}
+.productCardLP:hover img {
+    -webkit-transform: scale(1.08);
+    transform: scale(1.08);
+}
+
+
+
+/* RESPONSIVE */
+@media only screen and (max-width: 300px) {
+    main {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: center;
+        height: fit-content;
+        padding-top: 2rem;
+        padding-bottom: 3rem;
+        .contenidoPortada {
+            h1 {
+                text-align: center;
+                margin-left: auto;
+                margin-right: auto;
+                margin-top: 0rem;
+                font-size: 3rem;
+            }
+            h3 {
+                text-align: center;
+                margin-left: auto;
+                margin-right: auto;
+                font-size: 1.5rem;
+            }
+            .btnOfertas, .btnVerTodo {
+                background-color: #f700ff;
+                font-size: 0.7em;
+                font-family: 'Spartan', sans-serif;
+                font-weight: bold;
+                border-radius: 20px;
+                border: none;
+            }
+            .btnOfertas {
+                width: auto;
+                height: auto;
+            }
+            .btnVerTodo  {
+                width: auto;
+                height: auto;
+                outline: none;
+                color: #fff;
+                background: rgb(0, 0, 0);
+                cursor: pointer;
+                position: relative;
+                z-index: 0;
+                border-radius: 10px;
+                border: 1px solid #fff;
+                margin: 20px;
+            }
+            .buttonContent {
+                margin-top: 1.5rem;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+        .imgPortada {
+            width: 11em;
+            margin-bottom: 0rem;
+        }
+    }
+    .zonaCategorías {
+        display: grid;
+        grid-template-columns: 10rem;
+        row-gap: 1rem;
+        column-gap: 1rem;
+        .imgCatLP {
+            margin-left: auto;
+            margin-right: auto;
+            width: 100%;
+        }
+    }
+    .secciónVistoRecientemente {
+        height: fit-content;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+        .contenedorDeTarjetas {
+            height: 100%;
+            h2 {
+                font-size: 3rem;
+                text-align: center;
+            }
+            .miniCard {
+                width: 20rem;
+                height: fit-content;
+                padding-top: 1rem;
+                padding-bottom: 1rem;
+                padding-left: 1rem;
+                padding-right: 1rem;
+                margin-bottom: 1rem;
+                .content {
+                    img {
+                        width: 80%;
+                        height: 80%;
+                        padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+                    }
+                    .details {
+                        margin-top: 1.2rem;
+                        span {
+                            margin-right: 1rem;
+                        }
+                    }
+                }
+                a {
+                    padding: 5px 15px;
+                    font-size: 0.5rem;
+                    margin-right: 0.5rem;
+                }
+            }
+            .pVistoRec {
+                font-family: 'Oswald';
+                color: white;
+                font-size: 1.5rem;
+            }
+            .pVistoRec:hover {
+                text-shadow: 0 0 10px white;
+            }
+        }
+    }
+    .sugerenciasSegúnVisitas {
+        display: grid;
+        place-content: center;
+        justify-content: center;
+        align-items: center;
+        .contenedorSugerencias {
+            h2 {
+                text-align: center;
+                font-size: 3rem;
+            }
+            .grillaProductosSugeridos {
+                display: grid;
+                grid-template-columns: 12rem;
+                column-gap: 1rem;
+                row-gap: 1rem;
+                .productCardLP {
+                    padding: 10px 10px 10px 10px;
+                    .logoCart img {
+                        height: 30px;
+                        width: 30px;
+                    }
+                    .imagenProducto {
+                        position: relative;
+                        height: 130px;
+                        text-align: center;
+                        img {
+                            height: 100px;
+                            width: 150px;
+                        }
+                    }
+                    .prodDetalles .prodNombre {
+                        font-size: 0.3rem;
+                    }
+                    .prodDetalles p {
+                        font-size: 1rem;
+                    }
+                    .color-priceLP .color-option {
+                        font-size: 1rem;
+                    }
+                    .buttonLP button {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        font-size: 1rem;
+                    }
+                }
+            }
+        }
+        .verMás {
+            font-size: 1.5rem;
+        }
+    }
+}
+@media only screen and (min-width: 301px) and (max-width: 499px) {
+    main {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: center;
+        width: 100vw;
+        height: fit-content;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+        .contenidoPortada {
+            h1 {
+                text-align: center;
+                margin-left: auto;
+                margin-right: auto;
+                margin-top: 0rem;
+                font-size: 3rem;
+            }
+            h3 {
+                text-align: center;
+                margin-left: auto;
+                margin-right: auto;
+                font-size: 1.5rem;
+            }
+            .btnOfertas, .btnVerTodo {
+                background-color: #f700ff;
+                font-size: 0.999em;
+                font-family: 'Spartan', sans-serif;
+                font-weight: bold;
+                border-radius: 20px;
+                border: none;
+            }
+            .btnOfertas {
+                width: auto;
+                height: auto;
+            }
+            .btnVerTodo  {
+                width: auto;
+                height: auto;
+                outline: none;
+                color: #fff;
+                background: rgb(0, 0, 0);
+                cursor: pointer;
+                position: relative;
+                z-index: 0;
+                border-radius: 10px;
+                border: 1px solid #fff;
+                margin: 20px;
+            }
+            .buttonContent {
+                margin-top: 1.5rem;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+        .imgPortada {
+            width: 14em;
+            margin-bottom: 0rem;
+        }
+    }
+    .zonaCategorías {
+        display: grid;
+        grid-template-columns: 10rem 10rem;
+        row-gap: 1rem;
+        column-gap: 1rem;
+        .imgCatLP {
+            margin-left: auto;
+            margin-right: auto;
+            width: 100%;
+        }
+    }
+    .secciónVistoRecientemente {
+        height: fit-content;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+        .contenedorDeTarjetas {
+            height: 100%;
+            h2 {
+                font-size: 3rem;
+                text-align: center;
+            }
+            .miniCard {
+                width: 20rem;
+                height: fit-content;
+                padding-top: 1rem;
+                padding-bottom: 1rem;
+                padding-left: 1rem;
+                padding-right: 1rem;
+                margin-bottom: 1rem;
+                .content {
+                    img {
+                        width: 80%;
+                        height: 80%;
+                        padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+                    }
+                    .details {
+                        margin-top: 1.2rem;
+                        span {
+                            margin-right: 1rem;
+                        }
+                    }
+                }
+                a {
+                    padding: 5px 15px;
+                    font-size: 1rem;
+                    margin-right: 0.5rem;
+                }
+            }
+            .pVistoRec {
+                font-family: 'Oswald';
+                color: white;
+                font-size: 1.5rem;
+            }
+            .pVistoRec:hover {
+                text-shadow: 0 0 10px white;
+            }
+        }
+    }
+    .sugerenciasSegúnVisitas {
+        display: grid;
+        place-content: center;
+        justify-content: center;
+        align-items: center;
+        .contenedorSugerencias {
+            h2 {
+                text-align: center;
+                font-size: 3rem;
+            }
+            .grillaProductosSugeridos {
+                display: grid;
+                grid-template-columns: 12rem;
+                column-gap: 1rem;
+                row-gap: 1rem;
+                .productCardLP {
+                    padding: 10px 10px 10px 10px;
+                    .logoCart img {
+                        height: 30px;
+                        width: 30px;
+                    }
+                    .imagenProducto {
+                        position: relative;
+                        height: 130px;
+                        text-align: center;
+                        img {
+                            height: 100px;
+                            width: 150px;
+                        }
+                    }
+                    .prodDetalles .prodNombre {
+                        font-size: 0.3rem;
+                    }
+                    .prodDetalles p {
+                        font-size: 1rem;
+                    }
+                    .color-priceLP .color-option {
+                        font-size: 1rem;
+                    }
+                    .buttonLP button {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        font-size: 1rem;
+                    }
+                }
+            }
+        }
+        .verMás {
+            font-size: 1rem;
+        }
+    }
+}
+@media only screen and (min-width: 500px) and (max-width: 700px) {
+    main {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: center;
+        width: 100vw;
+        height: 100vh;
+        .contenidoPortada {
+            h1 {
+                text-align: center;
+                margin-left: auto;
+                margin-right: auto;
+                margin-top: 0rem;
+                font-size: 4rem;
+            }
+            h3 {
+                text-align: center;
+                margin-left: auto;
+                margin-right: auto;
+                font-size: 2rem;
+            }
+            .btnOfertas, .btnVerTodo {
+                background-color: #f700ff;
+                font-size: 1em;
+                font-family: 'Spartan', sans-serif;
+                font-weight: bold;
+                border-radius: 20px;
+                border: none;
+            }
+            .btnOfertas {
+                width: auto;
+                height: auto;
+            }
+            .btnVerTodo  {
+                width: auto;
+                height: auto;
+                outline: none;
+                color: #fff;
+                background: rgb(0, 0, 0);
+                cursor: pointer;
+                position: relative;
+                z-index: 0;
+                border-radius: 10px;
+                border: 1px solid #fff;
+                margin: 20px;
+            }
+            .buttonContent {
+                margin-top: 1.5rem;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+        .imgPortada {
+            width: 18em;
+            margin-bottom: 0rem;
+        }
+    }
+    .zonaCategorías {
+        display: grid;
+        grid-template-columns: 10rem 10rem;
+        row-gap: 1rem;
+        column-gap: 1rem;
+        .imgCatLP {
+            margin-left: auto;
+            margin-right: auto;
+            width: 100%;
+        }
+    }
+    .secciónVistoRecientemente {
+        height: fit-content;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+        .contenedorDeTarjetas {
+            height: 100%;
+            h2 {
+                font-size: 3rem;
+                text-align: center;
+            }
+            .miniCard {
+                width: 20rem;
+                height: fit-content;
+                padding-top: 1rem;
+                padding-bottom: 1rem;
+                padding-left: 1rem;
+                padding-right: 1rem;
+                margin-bottom: 1rem;
+                .content {
+                    img {
+                        width: 80%;
+                        height: 80%;
+                        padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+                    }
+                    .details {
+                        margin-top: 1.2rem;
+                        span {
+                            margin-right: 1rem;
+                        }
+                    }
+                }
+                a {
+                    padding: 5px 15px;
+                    font-size: 1rem;
+                    margin-right: 0.5rem;
+                }
+            }
+            .pVistoRec {
+                font-family: 'Oswald';
+                color: white;
+                font-size: 1.5rem;
+            }
+            .pVistoRec:hover {
+                text-shadow: 0 0 10px white;
+            }
+        }
+    }
+    .sugerenciasSegúnVisitas {
+        display: grid;
+        place-content: center;
+        justify-content: center;
+        align-items: center;
+        height: fit-content;
+        .contenedorSugerencias {
+            h2 {
+                text-align: center;
+                font-size: 3rem;
+            }
+            .grillaProductosSugeridos {
+                display: grid;
+                grid-template-columns: 12rem 12rem;
+                column-gap: 1rem;
+                row-gap: 1rem;
+                .productCardLP {
+                    padding: 10px 10px 10px 10px;
+                    .logoCart img {
+                        height: 30px;
+                        width: 30px;
+                    }
+                    .imagenProducto {
+                        position: relative;
+                        height: 130px;
+                        text-align: center;
+                        img {
+                            height: 100px;
+                            width: 150px;
+                        }
+                    }
+                    .prodDetalles .prodNombre {
+                        font-size: 0.3rem;
+                    }
+                    .prodDetalles p {
+                        font-size: 1rem;
+                    }
+                    .color-priceLP .color-option .color {
+                        font-size: 0.5rem;
+                    }
+                    .buttonLP button {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        font-size: 1rem;
+                    }
+                }
+            }
+        }
+    }
+}
+@media only screen and (min-width: 701px) and (max-width: 850px) {
+    main {
+        .contenidoPortada {
+            margin-bottom: 15rem;
+            color: #fff;
+            h1 {
+                font-family: 'Bebas Neue', sans-serif;
+                font-weight: lighter;
+                font-size: 3.6rem;
+                margin-bottom: 0.5rem;
+            }
+            h3 {
+                margin-bottom: 0.5rem;
+                margin-top: 0.5rem;
+                font-family: 'Spartan', sans-serif;
+                font-weight: lighter;
+                font-size: 1.3rem;
+            }
+        }
+        button {
+            cursor: pointer;
+            color: #fff;
+        }
+        button:hover {
+            box-shadow: none;
+        }
+        .btnOfertas {
+            background-color: #f700ff;
+            padding: 8px 30px;
+            font-size: 1em;
+            font-family: 'Spartan', sans-serif;
+            font-weight: bold;
+            border-radius: 20px;
+            border: none;
+        }
+        .btnVerTodo  {
+            display: none;
+        }
+        .btnVerTodo:before {
+            content: '';
+            background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+            position: absolute;
+            top: -2px;
+            left:-2px;
+            background-size: 400%;
+            z-index: -1;
+            filter: blur(5px);
+            width: calc(100% + 4px);
+            height: calc(100% + 4px);
+            animation: glowing 20s linear infinite;
+            opacity: 0;
+            transition: opacity .3s ease-in-out;
+            border-radius: 10px;
+        }
+        .btnVerTodo:active {
+            color: #000
+        }
+        .btnVerTodo:active:after {
+            background: transparent;
+        }
+        .btnVerTodo:hover:before {
+            opacity: 1;
+        }
+        .btnVerTodo:after {
+            z-index: -1;
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: rgba(17, 17, 17, 0);
+            left: 0;
+            top: 0;
+            border-radius: 10px;
+        }
+        @keyframes glowing {
+            0% { background-position: 0 0; }
+            50% { background-position: 400% 0; }
+            100% { background-position: 0 0; }
+        }
+        .btnOfertas {
+            width: 170px;
+            height: 50px;
+            border: none;
+            outline: none;
+            color: #fff;
+            background: rgb(17, 17, 17);
+            cursor: pointer;
+            position: relative;
+            z-index: 0;
+            border-radius: 10px;
+            text-decoration: none;
+            margin-top: 1rem;
+        }
+        .btnOfertas:before {
+            content: '';
+            background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+            position: absolute;
+            top: -2px;
+            left:-2px;
+            background-size: 400%;
+            z-index: -1;
+            filter: blur(5px);
+            width: calc(100% + 4px);
+            height: calc(100% + 4px);
+            animation: glowing 20s linear infinite;
+            opacity: 0;
+            transition: opacity .3s ease-in-out;
+            border-radius: 10px;
+        }
+        .btnOfertas:active {
+            color: #000
+        }
+        .btnOfertas:active:after {
+            background: transparent;
+        }
+        .btnOfertas:hover:before {
+            opacity: 1;
+        }
+        .btnOfertas:after {
+            z-index: -1;
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: rgb(247, 0, 255);
+            left: 0;
+            top: 0;
+            border-radius: 10px;
+        }
+        @keyframes glowing {
+            0% { background-position: 0 0; }
+            50% { background-position: 400% 0; }
+            100% { background-position: 0 0; }
+        }
+        .btnVerTodo {
+            background: none;
+            border: 1px solid #fff;
+            margin: 20px;
+        }
+        .imgPortada {
+            width: 350px;
+            margin-bottom: 10rem;
+        }
+    }
+    .zonaCategorías {
+        display: grid;
+        grid-template-columns: 10rem 10rem;
+        row-gap: 1rem;
+        column-gap: 1rem;
+        .imgCatLP {
+            margin-left: auto;
+            margin-right: auto;
+            width: 100%;
+        }
+    }
+    .secciónVistoRecientemente {
+        height: fit-content;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+        .contenedorDeTarjetas {
+            height: 100%;
+            h2 {
+                font-size: 3rem;
+                text-align: center;
+            }
+            .miniCard {
+                width: 20rem;
+                height: fit-content;
+                padding-top: 1rem;
+                padding-bottom: 1rem;
+                padding-left: 1rem;
+                padding-right: 1rem;
+                margin-bottom: 1rem;
+                .content {
+                    img {
+                        width: 80%;
+                        height: 80%;
+                        padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+                    }
+                    .details {
+                        margin-top: 1.2rem;
+                        span {
+                            margin-right: 1rem;
+                        }
+                    }
+                }
+                a {
+                    padding: 5px 15px;
+                    font-size: 1rem;
+                    margin-right: 0.5rem;
+                }
+            }
+            .pVistoRec {
+                font-family: 'Oswald';
+                color: white;
+                font-size: 1.5rem;
+            }
+            .pVistoRec:hover {
+                text-shadow: 0 0 10px white;
+            }
+        }
+    }
+    .sugerenciasSegúnVisitas {
+        display: grid;
+        place-content: center;
+        justify-content: center;
+        align-items: center;
+        height: fit-content;
+        .contenedorSugerencias {
+            h2 {
+                text-align: center;
+                font-size: 3rem;
+            }
+            .grillaProductosSugeridos {
+                display: grid;
+                grid-template-columns: 12rem 12rem;
+                column-gap: 1rem;
+                row-gap: 1rem;
+                .productCardLP {
+                    padding: 10px 10px 10px 10px;
+                    .logoCart img {
+                        height: 30px;
+                        width: 30px;
+                    }
+                    .imagenProducto {
+                        position: relative;
+                        height: 130px;
+                        text-align: center;
+                        img {
+                            height: 100px;
+                            width: 150px;
+                        }
+                    }
+                    .prodDetalles .prodNombre {
+                        font-size: 0.3rem;
+                    }
+                    .prodDetalles p {
+                        font-size: 1rem;
+                    }
+                    .color-priceLP .color-option .color {
+                        font-size: 0.5rem;
+                    }
+                    .buttonLP button {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        font-size: 1rem;
+                    }
+                }
+            }
+        }
+    }
+}
+@media only screen and (min-width: 851px) and (max-width: 989px) {
+    main {
+        .contenidoPortada {
+            margin-bottom: 15rem;
+            color: #fff;
+            h1 {
+                font-family: 'Bebas Neue', sans-serif;
+                font-weight: lighter;
+                font-size: 3.6rem;
+                margin-bottom: 0.5rem;
+            }
+            h3 {
+                margin-bottom: 0.5rem;
+                margin-top: 0.5rem;
+                font-family: 'Spartan', sans-serif;
+                font-weight: lighter;
+                font-size: 1.3rem;
+            }
+        }
+        button {
+            cursor: pointer;
+            color: #fff;
+        }
+        button:hover {
+            box-shadow: none;
+        }
+        .btnOfertas, .btnVerTodo {
+            background-color: #f700ff;
+            padding: 8px 30px;
+            font-size: 1em;
+            font-family: 'Spartan', sans-serif;
+            font-weight: bold;
+            border-radius: 20px;
+            border: none;
+        }
+        .btnVerTodo  {
+            width: 170px;
+            height: 50px;
+            border: none;
+            outline: none;
+            color: #fff;
+            background: #111;
+            cursor: pointer;
+            position: relative;
+            z-index: 0;
+            border-radius: 10px;
+        }
+        .btnVerTodo:before {
+            content: '';
+            background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+            position: absolute;
+            top: -2px;
+            left:-2px;
+            background-size: 400%;
+            z-index: -1;
+            filter: blur(5px);
+            width: calc(100% + 4px);
+            height: calc(100% + 4px);
+            animation: glowing 20s linear infinite;
+            opacity: 0;
+            transition: opacity .3s ease-in-out;
+            border-radius: 10px;
+        }
+        .btnVerTodo:active {
+            color: #000
+        }
+        .btnVerTodo:active:after {
+            background: transparent;
+        }
+        .btnVerTodo:hover:before {
+            opacity: 1;
+        }
+        .btnVerTodo:after {
+            z-index: -1;
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: rgba(17, 17, 17, 0);
+            left: 0;
+            top: 0;
+            border-radius: 10px;
+        }
+        @keyframes glowing {
+            0% { background-position: 0 0; }
+            50% { background-position: 400% 0; }
+            100% { background-position: 0 0; }
+        }
+        .btnOfertas {
+            width: 170px;
+            height: 50px;
+            border: none;
+            outline: none;
+            color: #fff;
+            background: rgb(17, 17, 17);
+            cursor: pointer;
+            position: relative;
+            z-index: 0;
+            border-radius: 10px;
+            text-decoration: none;
+        }
+        .btnOfertas:before {
+            content: '';
+            background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+            position: absolute;
+            top: -2px;
+            left:-2px;
+            background-size: 400%;
+            z-index: -1;
+            filter: blur(5px);
+            width: calc(100% + 4px);
+            height: calc(100% + 4px);
+            animation: glowing 20s linear infinite;
+            opacity: 0;
+            transition: opacity .3s ease-in-out;
+            border-radius: 10px;
+        }
+        .btnOfertas:active {
+            color: #000
+        }
+        .btnOfertas:active:after {
+            background: transparent;
+        }
+        .btnOfertas:hover:before {
+            opacity: 1;
+        }
+        .btnOfertas:after {
+            z-index: -1;
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: rgb(247, 0, 255);
+            left: 0;
+            top: 0;
+            border-radius: 10px;
+        }
+        @keyframes glowing {
+            0% { background-position: 0 0; }
+            50% { background-position: 400% 0; }
+            100% { background-position: 0 0; }
+        }
+        .btnVerTodo {
+            background: none;
+            border: 1px solid #fff;
+            margin: 20px;
+        }
+        .imgPortada {
+            width: 400px;
+            margin-bottom: 10rem;
+        }
+    }
+    .zonaCategorías {
+        display: grid;
+        grid-template-columns: 10rem 10rem;
+        row-gap: 1rem;
+        column-gap: 1rem;
+        .imgCatLP {
+            margin-left: auto;
+            margin-right: auto;
+            width: 100%;
+        }
+    }
+    .secciónVistoRecientemente {
+        height: fit-content;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+        .contenedorDeTarjetas {
+            height: 100%;
+            h2 {
+                font-size: 3rem;
+                text-align: center;
+            }
+            .miniCard {
+                width: 20rem;
+                height: fit-content;
+                padding-top: 1rem;
+                padding-bottom: 1rem;
+                padding-left: 1rem;
+                padding-right: 1rem;
+                margin-bottom: 1rem;
+                .content {
+                    img {
+                        width: 80%;
+                        height: 80%;
+                        padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+                    }
+                    .details {
+                        margin-top: 1.2rem;
+                        span {
+                            margin-right: 1rem;
+                        }
+                    }
+                }
+                a {
+                    padding: 5px 15px;
+                    font-size: 1rem;
+                    margin-right: 0.5rem;
+                }
+            }
+            .pVistoRec {
+                font-family: 'Oswald';
+                color: white;
+                font-size: 1.5rem;
+            }
+            .pVistoRec:hover {
+                text-shadow: 0 0 10px white;
+            }
+        }
+    }
+    .sugerenciasSegúnVisitas {
+        display: grid;
+        place-content: center;
+        justify-content: center;
+        align-items: center;
+        height: fit-content;
+        .contenedorSugerencias {
+            h2 {
+                text-align: center;
+                font-size: 3rem;
+            }
+            .grillaProductosSugeridos {
+                display: grid;
+                grid-template-columns: 12rem 12rem;
+                column-gap: 1rem;
+                row-gap: 1rem;
+                .productCardLP {
+                    padding: 10px 10px 10px 10px;
+                    .logoCart img {
+                        height: 30px;
+                        width: 30px;
+                    }
+                    .imagenProducto {
+                        position: relative;
+                        height: 130px;
+                        text-align: center;
+                        img {
+                            height: 100px;
+                            width: 150px;
+                        }
+                    }
+                    .prodDetalles .prodNombre {
+                        font-size: 0.3rem;
+                    }
+                    .prodDetalles p {
+                        font-size: 1rem;
+                    }
+                    .color-priceLP .color-option .color {
+                        font-size: 0.5rem;
+                    }
+                    .buttonLP button {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        font-size: 0.8rem;
+                    }
+                }
+            }
+        }
+    }
+}
+@media only screen and (min-width: 990px) and (max-width: 1024px) {
+    main {
+        .contenidoPortada {
+            margin-bottom: 15rem;
+            color: #fff;
+            h1 {
+                font-family: 'Bebas Neue', sans-serif;
+                font-weight: lighter;
+                font-size: 4rem;
+                margin-bottom: 0.5rem;
+            }
+            h3 {
+                margin-bottom: 0.5rem;
+                margin-top: 0.5rem;
+                font-family: 'Spartan', sans-serif;
+                font-weight: lighter;
+                font-size: 1.3rem;
+            }
+        }
+        button {
+            cursor: pointer;
+            color: #fff;
+        }
+        button:hover {
+            box-shadow: none;
+        }
+        .btnOfertas, .btnVerTodo {
+            background-color: #f700ff;
+            padding: 8px 30px;
+            font-size: 1em;
+            font-family: 'Spartan', sans-serif;
+            font-weight: bold;
+            border-radius: 20px;
+            border: none;
+        }
+        .btnVerTodo  {
+            width: 160px;
+            height: 40px;
+            border: none;
+            outline: none;
+            color: #fff;
+            background: #111;
+            cursor: pointer;
+            position: relative;
+            z-index: 0;
+            border-radius: 10px;
+        }
+        .btnVerTodo:before {
+            content: '';
+            background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+            position: absolute;
+            top: -2px;
+            left:-2px;
+            background-size: 400%;
+            z-index: -1;
+            filter: blur(5px);
+            width: calc(100% + 4px);
+            height: calc(100% + 4px);
+            animation: glowing 20s linear infinite;
+            opacity: 0;
+            transition: opacity .3s ease-in-out;
+            border-radius: 10px;
+        }
+        .btnVerTodo:active {
+            color: #000
+        }
+        .btnVerTodo:active:after {
+            background: transparent;
+        }
+        .btnVerTodo:hover:before {
+            opacity: 1;
+        }
+        .btnVerTodo:after {
+            z-index: -1;
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: rgba(17, 17, 17, 0);
+            left: 0;
+            top: 0;
+            border-radius: 10px;
+        }
+        @keyframes glowing {
+            0% { background-position: 0 0; }
+            50% { background-position: 400% 0; }
+            100% { background-position: 0 0; }
+        }
+        .btnOfertas {
+            width: 160px;
+            height: 40px;
+            border: none;
+            outline: none;
+            color: #fff;
+            background: rgb(17, 17, 17);
+            cursor: pointer;
+            position: relative;
+            z-index: 0;
+            border-radius: 10px;
+            text-decoration: none;
+        }
+        .btnOfertas:before {
+            content: '';
+            background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+            position: absolute;
+            top: -2px;
+            left:-2px;
+            background-size: 400%;
+            z-index: -1;
+            filter: blur(5px);
+            width: calc(100% + 4px);
+            height: calc(100% + 4px);
+            animation: glowing 20s linear infinite;
+            opacity: 0;
+            transition: opacity .3s ease-in-out;
+            border-radius: 10px;
+        }
+        .btnOfertas:active {
+            color: #000
+        }
+        .btnOfertas:active:after {
+            background: transparent;
+        }
+        .btnOfertas:hover:before {
+            opacity: 1;
+        }
+        .btnOfertas:after {
+            z-index: -1;
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: rgb(247, 0, 255);
+            left: 0;
+            top: 0;
+            border-radius: 10px;
+        }
+        @keyframes glowing {
+            0% { background-position: 0 0; }
+            50% { background-position: 400% 0; }
+            100% { background-position: 0 0; }
+        }
+        .btnVerTodo {
+            background: none;
+            border: 1px solid #fff;
+            margin: 20px;
+        }
+        .imgPortada {
+            width: 500px;
+            margin-bottom: 10rem;
+        }
+    }
+    .secciónVistoRecientemente {
+        height: fit-content;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+        .contenedorDeTarjetas {
+            height: 100%;
+            h2 {
+                font-size: 3.5rem;
+                text-align: center;
+            }
+            .miniCard {
+                width: 20rem;
+                height: fit-content;
+                padding-top: 1rem;
+                padding-bottom: 1rem;
+                padding-left: 1rem;
+                padding-right: 1rem;
+                margin-bottom: 1rem;
+                .content {
+                    img {
+                        width: 80%;
+                        height: 80%;
+                        padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+                    }
+                    .details {
+                        margin-top: 1.2rem;
+                        span {
+                            margin-right: 1rem;
+                        }
+                    }
+                }
+                a {
+                    padding: 5px 15px;
+                    font-size: 1rem;
+                    margin-right: 0.5rem;
+                }
+            }
+            .pVistoRec {
+                font-family: 'Oswald';
+                color: white;
+                font-size: 1.5rem;
+            }
+            .pVistoRec:hover {
+                text-shadow: 0 0 10px white;
+            }
+        }
+    }
+    .sugerenciasSegúnVisitas {
+        .contenedorSugerencias {
+            h2 {
+                font-size: 3.5rem;
+            }
+        }
+    }
+}
+@media only screen and (min-width: 1025px) and (max-width: 1200px) {
+    main {
+        .contenidoPortada {
+            margin-bottom: 15rem;
+            color: #fff;
+            h1 {
+                font-family: 'Bebas Neue', sans-serif;
+                font-weight: lighter;
+                font-size: 4rem;
+                margin-bottom: 0.5rem;
+            }
+            h3 {
+                margin-bottom: 0.5rem;
+                margin-top: 0.5rem;
+                font-family: 'Spartan', sans-serif;
+                font-weight: lighter;
+                font-size: 1.3rem;
+            }
+        }
+        button {
+            cursor: pointer;
+            color: #fff;
+        }
+        button:hover {
+            box-shadow: none;
+        }
+        .btnOfertas, .btnVerTodo {
+            background-color: #f700ff;
+            padding: 8px 30px;
+            font-size: 1em;
+            font-family: 'Spartan', sans-serif;
+            font-weight: bold;
+            border-radius: 20px;
+            border: none;
+        }
+        .btnVerTodo  {
+            width: 160px;
+            height: 40px;
+            border: none;
+            outline: none;
+            color: #fff;
+            background: #111;
+            cursor: pointer;
+            position: relative;
+            z-index: 0;
+            border-radius: 10px;
+        }
+        .btnVerTodo:before {
+            content: '';
+            background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+            position: absolute;
+            top: -2px;
+            left:-2px;
+            background-size: 400%;
+            z-index: -1;
+            filter: blur(5px);
+            width: calc(100% + 4px);
+            height: calc(100% + 4px);
+            animation: glowing 20s linear infinite;
+            opacity: 0;
+            transition: opacity .3s ease-in-out;
+            border-radius: 10px;
+        }
+        .btnVerTodo:active {
+            color: #000
+        }
+        .btnVerTodo:active:after {
+            background: transparent;
+        }
+        .btnVerTodo:hover:before {
+            opacity: 1;
+        }
+        .btnVerTodo:after {
+            z-index: -1;
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: rgba(17, 17, 17, 0);
+            left: 0;
+            top: 0;
+            border-radius: 10px;
+        }
+        @keyframes glowing {
+            0% { background-position: 0 0; }
+            50% { background-position: 400% 0; }
+            100% { background-position: 0 0; }
+        }
+        .btnOfertas {
+            width: 160px;
+            height: 40px;
+            border: none;
+            outline: none;
+            color: #fff;
+            background: rgb(17, 17, 17);
+            cursor: pointer;
+            position: relative;
+            z-index: 0;
+            border-radius: 10px;
+            text-decoration: none;
+        }
+        .btnOfertas:before {
+            content: '';
+            background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+            position: absolute;
+            top: -2px;
+            left:-2px;
+            background-size: 400%;
+            z-index: -1;
+            filter: blur(5px);
+            width: calc(100% + 4px);
+            height: calc(100% + 4px);
+            animation: glowing 20s linear infinite;
+            opacity: 0;
+            transition: opacity .3s ease-in-out;
+            border-radius: 10px;
+        }
+        .btnOfertas:active {
+            color: #000
+        }
+        .btnOfertas:active:after {
+            background: transparent;
+        }
+        .btnOfertas:hover:before {
+            opacity: 1;
+        }
+        .btnOfertas:after {
+            z-index: -1;
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: rgb(247, 0, 255);
+            left: 0;
+            top: 0;
+            border-radius: 10px;
+        }
+        @keyframes glowing {
+            0% { background-position: 0 0; }
+            50% { background-position: 400% 0; }
+            100% { background-position: 0 0; }
+        }
+        .btnVerTodo {
+            background: none;
+            border: 1px solid #fff;
+            margin: 20px;
+        }
+        .imgPortada {
+            width: 500px;
+            margin-bottom: 10rem;
+        }
+    }
+    .secciónVistoRecientemente {
+        height: fit-content;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+        .contenedorDeTarjetas {
+            height: 100%;
+            h2 {
+                font-size: 3.5rem;
+                text-align: center;
+            }
+            .miniCard {
+                width: 20rem;
+                height: fit-content;
+                padding-top: 1rem;
+                padding-bottom: 1rem;
+                padding-left: 1rem;
+                padding-right: 1rem;
+                margin-bottom: 1rem;
+                .content {
+                    img {
+                        width: 80%;
+                        height: 80%;
+                        padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+                    }
+                    .details {
+                        margin-top: 1.2rem;
+                        span {
+                            margin-right: 1rem;
+                        }
+                    }
+                }
+                a {
+                    padding: 5px 15px;
+                    font-size: 1rem;
+                    margin-right: 0.5rem;
+                }
+            }
+            .pVistoRec {
+                font-family: 'Oswald';
+                color: white;
+                font-size: 1.5rem;
+            }
+            .pVistoRec:hover {
+                text-shadow: 0 0 10px white;
+            }
+        }
+    }
+    .sugerenciasSegúnVisitas {
+        .contenedorSugerencias {
+            h2 {
+                font-size: 3.5rem;
+            }
+        }
+    }
+}
+@media only screen and (min-width: 1201px) and (max-width: 1400px) {
+    .contenidoPortada {
+        margin-bottom: 15rem;
+        color: #fff;
+        h1 {
+            font-family: 'Bebas Neue', sans-serif;
+            font-weight: lighter;
+            font-size: 4.5rem;
+            margin-bottom: 0.5rem;
+        }
+        h3 {
+            margin-bottom: 0.5rem;
+            margin-top: 0.5rem;
+            font-family: 'Spartan', sans-serif;
+            font-weight: lighter;
+            font-size: 1.3rem;
+        }
+    }
+    button {
+        cursor: pointer;
+        color: #fff;
+    }
+    button:hover {
+        box-shadow: none;
+    }
+    .btnOfertas, .btnVerTodo {
+        background-color: #f700ff;
+        padding: 8px 30px;
+        font-size: 1em;
+        font-family: 'Spartan', sans-serif;
+        font-weight: bold;
+        border-radius: 20px;
+        border: none;
+    }
+    .btnVerTodo  {
+        width: 160px;
+        height: 40px;
+        border: none;
+        outline: none;
+        color: #fff;
+        background: #111;
+        cursor: pointer;
+        position: relative;
+        z-index: 0;
+        border-radius: 10px;
+    }
+    .btnVerTodo:before {
+        content: '';
+        background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+        position: absolute;
+        top: -2px;
+        left:-2px;
+        background-size: 400%;
+        z-index: -1;
+        filter: blur(5px);
+        width: calc(100% + 4px);
+        height: calc(100% + 4px);
+        animation: glowing 20s linear infinite;
+        opacity: 0;
+        transition: opacity .3s ease-in-out;
+        border-radius: 10px;
+    }
+    .btnVerTodo:active {
+        color: #000
+    }
+    .btnVerTodo:active:after {
+        background: transparent;
+    }
+    .btnVerTodo:hover:before {
+        opacity: 1;
+    }
+    .btnVerTodo:after {
+        z-index: -1;
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: rgba(17, 17, 17, 0);
+        left: 0;
+        top: 0;
+        border-radius: 10px;
+    }
+    @keyframes glowing {
+        0% { background-position: 0 0; }
+        50% { background-position: 400% 0; }
+        100% { background-position: 0 0; }
+    }
+    .btnOfertas {
+        width: 160px;
+        height: 40px;
+        border: none;
+        outline: none;
+        color: #fff;
+        background: rgb(17, 17, 17);
+        cursor: pointer;
+        position: relative;
+        z-index: 0;
+        border-radius: 10px;
+        text-decoration: none;
+    }
+    .btnOfertas:before {
+        content: '';
+        background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+        position: absolute;
+        top: -2px;
+        left:-2px;
+        background-size: 400%;
+        z-index: -1;
+        filter: blur(5px);
+        width: calc(100% + 4px);
+        height: calc(100% + 4px);
+        animation: glowing 20s linear infinite;
+        opacity: 0;
+        transition: opacity .3s ease-in-out;
+        border-radius: 10px;
+    }
+    .btnOfertas:active {
+        color: #000
+    }
+    .btnOfertas:active:after {
+        background: transparent;
+    }
+    .btnOfertas:hover:before {
+        opacity: 1;
+    }
+    .btnOfertas:after {
+        z-index: -1;
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: rgb(247, 0, 255);
+        left: 0;
+        top: 0;
+        border-radius: 10px;
+    }
+    @keyframes glowing {
+        0% { background-position: 0 0; }
+        50% { background-position: 400% 0; }
+        100% { background-position: 0 0; }
+    }
+    .btnVerTodo {
+        background: none;
+        border: 1px solid #fff;
+        margin: 20px;
+    }
+    .imgPortada {
+        width: 530px;
+        height: 490px;
+        margin-bottom: 10rem;
+    }
+    .divisor {
+        background: url("../images/Separador.jpg");
+        width: 100%;
+        height: 20vh;
+        background-attachment: fixed;
+    }
+    .secciónVistoRecientemente {
+        height: fit-content;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+        .contenedorDeTarjetas {
+            height: 100%;
+            h2 {
+                font-size: 3.5rem;
+                text-align: center;
+            }
+            .miniCard {
+                width: 20rem;
+                height: fit-content;
+                padding-top: 1rem;
+                padding-bottom: 1rem;
+                padding-left: 1rem;
+                padding-right: 1rem;
+                margin-bottom: 1rem;
+                .content {
+                    img {
+                        width: 80%;
+                        height: 80%;
+                        padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+                    }
+                    .details {
+                        margin-top: 1.2rem;
+                        span {
+                            margin-right: 1rem;
+                        }
+                    }
+                }
+                a {
+                    padding: 5px 15px;
+                    font-size: 1rem;
+                    margin-right: 0.5rem;
+                }
+            }
+            .pVistoRec {
+                font-family: 'Oswald';
+                color: white;
+                font-size: 1.5rem;
+            }
+            .pVistoRec:hover {
+                text-shadow: 0 0 10px white;
+            }
+        }
+    }
+}
+@media only screen and (min-width: 1401px) and (max-width: 1701px) {
+    .contenidoPortada {
+        margin-bottom: 15rem;
+        color: #fff;
+        h1 {
+            font-family: 'Bebas Neue', sans-serif;
+            font-weight: lighter;
+            font-size: 4.9rem;
+            margin-bottom: 0.5rem;
+        }
+        h3 {
+            margin-bottom: 0.5rem;
+            margin-top: 0.5rem;
+            font-family: 'Spartan', sans-serif;
+            font-weight: lighter;
+            font-size: 1.5rem;
+        }
+    }
+    button {
+        cursor: pointer;
+        color: #fff;
+    }
+    button:hover {
+        box-shadow: none;
+    }
+    .btnOfertas, .btnVerTodo {
+        background-color: #f700ff;
+        padding: 8px 30px;
+        font-size: 1em;
+        font-family: 'Spartan', sans-serif;
+        font-weight: bold;
+        border-radius: 20px;
+        border: none;
+    }
+    .btnVerTodo  {
+        width: 160px;
+        height: 40px;
+        border: none;
+        outline: none;
+        color: #fff;
+        background: #111;
+        cursor: pointer;
+        position: relative;
+        z-index: 0;
+        border-radius: 10px;
+    }
+    .btnVerTodo:before {
+        content: '';
+        background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+        position: absolute;
+        top: -2px;
+        left:-2px;
+        background-size: 400%;
+        z-index: -1;
+        filter: blur(5px);
+        width: calc(100% + 4px);
+        height: calc(100% + 4px);
+        animation: glowing 20s linear infinite;
+        opacity: 0;
+        transition: opacity .3s ease-in-out;
+        border-radius: 10px;
+    }
+    .btnVerTodo:active {
+        color: #000
+    }
+    .btnVerTodo:active:after {
+        background: transparent;
+    }
+    .btnVerTodo:hover:before {
+        opacity: 1;
+    }
+    .btnVerTodo:after {
+        z-index: -1;
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: rgba(17, 17, 17, 0);
+        left: 0;
+        top: 0;
+        border-radius: 10px;
+    }
+    @keyframes glowing {
+        0% { background-position: 0 0; }
+        50% { background-position: 400% 0; }
+        100% { background-position: 0 0; }
+    }
+    .btnOfertas {
+        width: 160px;
+        height: 40px;
+        border: none;
+        outline: none;
+        color: #fff;
+        background: rgb(17, 17, 17);
+        cursor: pointer;
+        position: relative;
+        z-index: 0;
+        border-radius: 10px;
+        text-decoration: none;
+    }
+    .btnOfertas:before {
+        content: '';
+        background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+        position: absolute;
+        top: -2px;
+        left:-2px;
+        background-size: 400%;
+        z-index: -1;
+        filter: blur(5px);
+        width: calc(100% + 4px);
+        height: calc(100% + 4px);
+        animation: glowing 20s linear infinite;
+        opacity: 0;
+        transition: opacity .3s ease-in-out;
+        border-radius: 10px;
+    }
+    .btnOfertas:active {
+        color: #000
+    }
+    .btnOfertas:active:after {
+        background: transparent;
+    }
+    .btnOfertas:hover:before {
+        opacity: 1;
+    }
+    .btnOfertas:after {
+        z-index: -1;
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: rgb(247, 0, 255);
+        left: 0;
+        top: 0;
+        border-radius: 10px;
+    }
+    @keyframes glowing {
+        0% { background-position: 0 0; }
+        50% { background-position: 400% 0; }
+        100% { background-position: 0 0; }
+    }
+    .btnVerTodo {
+        background: none;
+        border: 1px solid #fff;
+        margin: 20px;
+    }
+    .imgPortada {
+        width: 530px;
+        height: 490px;
+        margin-bottom: 10rem;
+    }
+    .divisor {
+        background: url("../images/Separador.jpg");
+        width: 100%;
+        height: 20vh;
+        background-attachment: fixed;
+    }
+    .secciónVistoRecientemente {
+        height: fit-content;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+        .contenedorDeTarjetas {
+            height: 100%;
+            h2 {
+                font-size: 3.5rem;
+                text-align: center;
+            }
+            .miniCard {
+                width: 20rem;
+                height: fit-content;
+                padding-top: 1rem;
+                padding-bottom: 1rem;
+                padding-left: 1rem;
+                padding-right: 1rem;
+                margin-bottom: 1rem;
+                .content {
+                    img {
+                        width: 80%;
+                        height: 80%;
+                        padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+                    }
+                    .details {
+                        margin-top: 1.2rem;
+                        span {
+                            margin-right: 1rem;
+                        }
+                    }
+                }
+                a {
+                    padding: 5px 15px;
+                    font-size: 1rem;
+                    margin-right: 0.5rem;
+                }
+            }
+            .pVistoRec {
+                font-family: 'Oswald';
+                color: white;
+                font-size: 1.5rem;
+            }
+            .pVistoRec:hover {
+                text-shadow: 0 0 10px white;
+            }
+        }
+    }
+}

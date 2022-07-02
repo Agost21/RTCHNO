@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RANDOMTECHNO | Error</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Carrois+Gothic+SC&family=Cormorant+SC:wght@300&family=Noto+Serif+Display:ital,wght@0,100;0,400;1,100;1,400&family=Poppins:ital,wght@0,100;0,200;1,100&family=Share+Tech+Mono&family=Unna&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="texto">
+            <h1 class="glitch"><span aria-hidden="true">ERROR 404</span>ERROR 404<span aria-hidden="true">ERROR</span></h1> <br>
+            <h2>Querido internauta, parece que te perdiste en el ciberespacio!</h2>
+            <p>Para acceder a nuestra página principal, hacé click acá:<a href="../index.html" style="text-decoration: none;"> www.randomtechno.com</a></p>
+            <p>Para ver nuestras ofertas:<a href="../html/ofertas.html" style="text-decoration: none;"> www.randomtechno.com/ofertas</a></p>
+            <p>Para ver todos nuestros productos:<a href="../index.html" style="text-decoration: none;"> www.randomtechno.com/todas-las-categorías</a></p>
+        </div>
+    </div>
+    <style>
+        body {
+            background-color: black;
+            margin: 0px;
+        }
+        .container {
+            height: 100vh;
+            width: 100vw;
+            overflow: hidden;
+            background-image: url('../images/FondoError.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            overflow-x: hidden;
+        }
+        .texto {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            height: 100vh;
+            width: 100vw;
+            background-color: rgba(0, 0, 0, 0.671);
+        }
+        .texto > h2 {
+            font-family: 'Spartan', sans-serif;
+            background: #121FCF;
+            background: -webkit-linear-gradient(to right, #121FCF 0%, #00FFDD 100%);
+            background: -moz-linear-gradient(to right, #121FCF 0%, #00FFDD 100%);
+            background: linear-gradient(to right, #121FCF 0%, #00FFDD 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-size: 2rem;
+            font-weight: bolder;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+        }
+        .texto > p {
+            font-family: 'Spartan', sans-serif;
+            color: #FFF;
+            font-size: 1rem;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+        }
+        .glitch{
+            font-size: 6rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            position: relative;
+            font-family: 'Bebas Neue', sans-serif;
+            text-shadow: 
+            0.05em 0 0 rgba(0, 255, 221, 0.75),
+            -0.025em -0.05em 0 rgba(98, 0, 255, 0.75),
+            0.025em 0.05em 0 rgba(0, 0, 255, 0.75);
+            color: #FFF;
+        }
+        .glitch span {
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        .glitch span:first-child {
+            animation: glitch 650ms infinite;
+            clip-path: polygon(0 0, 100% 0, 100% 45%, 0 45%);
+            transform: translate(-.05em, -0.0125em);
+            opacity: 0.8;
+        }
+        .glitch span:last-child {
+            animation: glitch 375ms infinite;
+            clip-path: polygon(0 60%, 100% 60%, 100% 100%, 0 100%);
+            transform: translate(0.0125em, 0.025em);
+            opacity: 0.8;
+        }
+        @media only screen and (max-width: 650px) {
+            .container {
+            background-image: url('../images/FondoErrorMobile.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            overflow-x: hidden;
+            }
+        }
+    </style>
+</body>
+</html>
